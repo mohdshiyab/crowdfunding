@@ -41,3 +41,24 @@ module.exports = {
     },
   },
 };
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+  solidity: {
+    version: "0.8.9",
+    defaultNetwork: "sepolia", // Changed default network to Sepolia
+    networks: {
+      hardhat: {},
+      sepolia: {
+        url: "https://rpc.ankr.com/eth_sepolia", // Sepolia RPC endpoint
+        accounts: [`0x${process.env.PRIVATE_KEY}`], // Make sure the PRIVATE_KEY is correctly prefixed with 0x
+      },
+    },
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
+  },
+};
+

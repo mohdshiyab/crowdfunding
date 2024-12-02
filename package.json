@@ -2,7 +2,7 @@
   "name": "hardhat-javascript-starter",
   "scripts": {
     "build": "npx thirdweb@latest detect",
-    "deploy": "npx thirdweb@latest deploy",
+    "deploy": "npx thirdweb@latest deploy -k $PRIVATE_KEY",
     "publish": "npx thirdweb@latest publish"
   },
   "devDependencies": {
@@ -10,7 +10,9 @@
     "hardhat": "^2.13.0"
   },
   "dependencies": {
+    "@thirdweb-dev/cli": "^0.14.12",
     "@thirdweb-dev/contracts": "^3.8.0",
-    "zksync-web3": "^0.14.3"
+    "dotenv": "^16.4.5",
+    "zksync-web3": "^0.14.4"
   }
 }
